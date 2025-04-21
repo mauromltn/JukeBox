@@ -1,6 +1,130 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    span {
+        position: absolute;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    nav {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        input {
+            background-color: #141414;
+            color: #000000;
+            width: 270px;
+            height: 40px;
+            outline: none;
+            border: none;
+            border-radius: 100px;
+            color: #ffffff;
+            padding: 0 1rem;
+        }
+
+        button {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            right: 37.8rem;
+            top: 0.48rem;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    margin-top: 10rem;
+
+    .hero {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            width: 900px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            width: 830px;
+        }
+    }
+
+    .inserisci {
+        margin-top: 5rem;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        background-color: #1cd760;
+        padding: 3rem;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .formContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 10rem;
+
+            .formBox {
+                background-color: #073116;
+                padding: 2rem;
+                border-radius: 12px;
+                color: #ffffff;
+
+                h2 { margin-bottom: 1rem; }
+                
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.3rem;
+                }
+
+                input {
+                    width: 300px;
+                    height: 35px;
+                    border: none;
+                    border-radius: 12px;
+                    padding: 0 1rem;
+                    outline: none;
+                }
+
+                button {
+                    background-color: #141414;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 100px;
+                    padding: 0.5rem 1rem;
+                    margin-left: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

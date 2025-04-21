@@ -4,35 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jukebox</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body >
     <header>
+        <span>JukeBox</span>
+
         <nav>
             <input type="text" placeholder="Ricerca Canzoni o Cantanti">
-            <button>Search</button>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                    <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+                </svg>
+            </button>
         </nav>
     </header>
 
     <main>
-        <div class="box">
-            <h1>Inserisci canzone</h1>
-        </div>
-        <div class="box">
-            <h1>Inserisci cantante</h1>
-        </div>
-        <div class="box">
-            <h1>Aggiorna canzone</h1>
-        </div>
-        <div class="box">
-            <h1>Aggiorna cantante</h1>
-        </div>
-        <div class="box">
-            <h1>Elimina canzone</h1>
-        </div>
-        <div class="box">
-            <h1>Elimina cantante</h1>
-        </div>
+        <section class="hero">
+            <h1 class="font-bold">
+                Gestisci facilmente le tue canzoni e i tuoi cantanti preferiti
+            </h1>
+            <p>
+                Aggiungi, aggiorna ed elimina informazioni su canzoni e cantanti in pochi click. Compila il form scegliendo tra “Canzone” o “Cantante”. 
+                Usa la barra di ricerca per trovare subito quello che ti serve. I risultati verranno mostrati in una nuova pagina!
+            </p>    
+        </section>
+
+        <section class="inserisci">
+            <h1>Inserisci</h1>
+
+            <div class="formContainer">
+                <div class="formBox">
+                    <h2>Canzone</h2>
+                    <form action="index.php" method="POST">
+                        <input type="text" placeholder="Titolo">
+                        <input type="text" placeholder="Cantante">
+                        <input type="text" placeholder="Durata (min:sec)">
+                        <input type="text" placeholder="Genere">
+                        <input type="number" placeholder="Anno di uscita">
+                        <button type="submit">Salva</button>
+                    </form>
+                </div>
+
+                <div class="formBox">
+                    <h2>Cantante</h2>
+                    <form action="index.php" method="POST">
+                        <input type="text" placeholder="Nome e cognome">
+                        <input type="text" placeholder="Nome d'arte">
+                        <input type="text" placeholder="Nazionalità">
+                        <input type="number" placeholder="Anno di nascita">
+                        <button type="submit">Salva</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+
 </body>
 </html>
